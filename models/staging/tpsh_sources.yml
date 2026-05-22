@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: "snowflake_sample_data"
+    schema: "TPCH_SF1"
+    tables:
+      - name: orders
+        columns:
+          - name: o_orderkey
+            tests:
+              - not_null
+              - unique
+            description: "Primary key for the orders table"
+      - name: lineitem
+        columns:
+          - name: l_orderkey
+            description: "Foreign key to the orders table"

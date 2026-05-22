@@ -1,0 +1,16 @@
+version: 2
+
+snapshots:
+  - name: orders_scd2
+    description: "SCD Type 2 snapshot for orders that tracks history when key order fields change."
+    columns:
+      - name: order_key
+        description: "Primary key identifying the order."
+      - name: customer_key
+        description: "Customer associated with the order."
+      - name: status_code
+        description: "Order status code."
+      - name: total_price
+        description: "Total order amount."
+      - name: order_date
+        description: "Source order date from the system."

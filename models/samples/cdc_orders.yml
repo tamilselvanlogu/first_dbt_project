@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: cdc_orders
+    description: "Sample CDC model that loads new or updated order rows incrementally."
+    columns:
+      - name: order_key
+        description: "Primary key for the order."
+      - name: customer_key
+        description: "Customer identifier for the order."
+      - name: status_code
+        description: "Order status code."
+      - name: total_price
+        description: "Total order amount."
+      - name: order_date
+        description: "Order date from the source system."
+      - name: updated_at
+        description: "Timestamp used for CDC incremental loading."
+      - name: is_deleted
+        description: "Flag indicating whether the row was deleted in the source system."
